@@ -4,16 +4,17 @@ package com.mmattos.jobrunner;
  * Defines a piece of work to be executed on behalf of a customer
  */
 public interface Job {
-    // Uniquely identifies the customer associated with this job
-    long customerId();
 
-    // Uniquely identifies the job. 2 jobs with the same
-    // uniqueId should behave identically when executed
-    long uniqueId();
+  // Uniquely identifies the customer associated with this job
+  long customerId();
 
-    // Estimated time in milliseconds that the job will take to execute
-    int duration();
+  // Uniquely identifies the job. 2 jobs with the same
+  // uniqueId should behave identically when executed
+  long uniqueId();
 
-    // Execute the job
-    void execute();
+  // Estimated time in milliseconds that the job will take to execute
+  int duration();
+
+  // Execute the job
+  void execute();
 }

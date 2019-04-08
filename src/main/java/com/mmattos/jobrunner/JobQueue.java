@@ -4,6 +4,7 @@ package com.mmattos.jobrunner;
  * Provides Jobs to execute
  */
 public interface JobQueue {
-    // Remove a job from the queue. If the queue has been drained, // this call will block until a new job becomes available
-    Job pop();
+
+  // Remove a job from the queue. If the queue has been drained, // this call will block until a new job becomes available
+  Job pop();
 }
