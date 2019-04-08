@@ -13,7 +13,7 @@ public class JobCallable implements Callable<JobStatus> {
     }
 
     @Override
-    public JobStatus call() throws Exception {
+    public JobStatus call() {
         try {
             JobStatusHandler.getInstance().update(job.uniqueId(), Status.RUNNING);
             job.execute();
