@@ -8,7 +8,7 @@ public interface Job {
     long customerId();
 
     // Uniquely identifies the job. 2 jobs with the same
-// uniqueId should behave identically when executed
+    // uniqueId should behave identically when executed
     long uniqueId();
 
     // Estimated time in milliseconds that the job will take to execute

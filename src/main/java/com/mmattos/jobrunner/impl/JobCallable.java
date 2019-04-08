@@ -20,6 +20,6 @@ public class JobCallable implements Callable<JobStatus> {
         } catch (Exception e) {
             return new JobStatus(job.uniqueId(), Status.FAILURE);
         }
-        return new JobStatus(job.uniqueId(),Status.SUCCESS);
+        return new JobStatus(job.uniqueId(), Status.SUCCESS);
     }
 }

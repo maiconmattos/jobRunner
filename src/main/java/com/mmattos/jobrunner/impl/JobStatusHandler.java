@@ -12,10 +12,10 @@ public class JobStatusHandler {
 
     private Map<Long, Status> jobStatusMap = new HashMap<>();
 
-    private JobStatusHandler() {}
+    private JobStatusHandler() {
+    }
 
-    public static JobStatusHandler getInstance()
-    {
+    public static JobStatusHandler getInstance() {
         if (instance == null)
             instance = new JobStatusHandler();
         return instance;

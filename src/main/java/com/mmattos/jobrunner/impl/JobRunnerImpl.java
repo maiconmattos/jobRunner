@@ -17,7 +17,7 @@ public class JobRunnerImpl implements JobRunner {
         ExecutorService executor = Executors.newCachedThreadPool();
         CompletionService<JobStatus> completionService = new ExecutorCompletionService<>(executor);
 
-        for (long i = jobCount; i >0; i--) {
+        for (long i = jobCount; i > 0; i--) {
             Job job = jobQueue.pop();
             completionService.submit(new JobCallable(job));
             JobStatusHandler.getInstance().update(job.uniqueId(), Status.SUBMITTED);
@@ -34,11 +34,11 @@ public class JobRunnerImpl implements JobRunner {
     }
 
     private void checkCompletion(CompletionService<JobStatus> completionService, long jobCount) {
-        for (long i = jobCount; i >0; i--) {
+        for (long i = jobCount; i > 0; i--) {
             try {
                 JobStatus jobStatus = completionService.take().get();
                 JobStatusHandler.getInstance().update(jobStatus.getUniqueId(), jobStatus.getStatus());
-            } catch (InterruptedException | ExecutionException e ) {
+            } catch (InterruptedException | ExecutionException e) {
                 logger.log(Level.WARNING, "Error while trying to retrieve job status.");
             }
         }

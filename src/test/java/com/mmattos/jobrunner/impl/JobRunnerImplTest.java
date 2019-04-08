@@ -30,12 +30,8 @@ public class JobRunnerImplTest {
 
     private void createJobs(Deque<Job> jobs, int count, int first) {
         int last = count + (first - 1);
-        //logger.info("Requested to create [" + count + "] jobs from [" + first + " to [" +  last + "]");
-
         for (int i=first; i <= last ; i++) {
             jobs.add(new JobImpl(i, i, 10));
         }
-
-        //logger.info("[" + count + "] jobs from [" + first + " to [" + last + "] were created successfully");
     }
 }
