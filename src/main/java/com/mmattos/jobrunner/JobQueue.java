@@ -1,4 +1,4 @@
-package com.workday.techtest;
+package com.mmattos.jobrunner;
 /**
 * Provides Jobs to execute */
 public interface JobQueue {

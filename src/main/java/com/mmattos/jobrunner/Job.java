@@ -1,4 +1,4 @@
-package com.workday.techtest;
+package com.mmattos.jobrunner;
 
 /**
  * Defines a piece of work to be executed on behalf of a customer

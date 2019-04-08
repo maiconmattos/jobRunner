@@ -1,16 +1,16 @@
-package com.workday.techtest.impl;
+package com.mmattos.jobrunner.impl;
 
-import com.workday.techtest.Job;
+import com.mmattos.jobrunner.Job;
 
 import java.util.concurrent.TimeUnit;
 
-public class JobImpl implements Job {
+public class FalingJobImpl implements Job {
 
     private long customerId;
     private long uniqueId;
     private int duration;
 
-    public JobImpl(long customerId, long uniqueId, int duration) {
+    public FalingJobImpl(long customerId, long uniqueId, int duration) {
         this.customerId = customerId;
         this.uniqueId = uniqueId;
         this.duration = duration;
@@ -30,8 +30,10 @@ public class JobImpl implements Job {
 
     public void execute() {
         try {
-            TimeUnit.SECONDS.sleep(duration);
+            TimeUnit.SECONDS.sleep(duration / 2);
         } catch (InterruptedException e) {
         }
+        throw new RuntimeException("FAILED job from customer [ " + customerId + " ], " +
+                "uniqueId [" + uniqueId + "] Duration : " + duration + " seconds.");
     }
 }

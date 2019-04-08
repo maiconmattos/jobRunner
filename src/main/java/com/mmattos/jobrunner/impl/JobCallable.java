@@ -1,6 +1,6 @@
-package com.workday.techtest.impl;
+package com.mmattos.jobrunner.impl;
 
-import com.workday.techtest.Job;
+import com.mmattos.jobrunner.Job;
 
 import java.util.concurrent.Callable;
 

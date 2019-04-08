@@ -1,4 +1,4 @@
-package com.workday.techtest.impl;
+package com.mmattos.jobrunner.impl;
 
 public class JobStatus {
     private long uniqueId;

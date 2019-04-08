@@ -1,4 +1,4 @@
-package com.workday.techtest.impl;
+package com.mmattos.jobrunner.impl;
 
 import java.util.HashMap;
 import java.util.Map;

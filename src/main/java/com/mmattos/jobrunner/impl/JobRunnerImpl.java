@@ -1,8 +1,8 @@
-package com.workday.techtest.impl;
+package com.mmattos.jobrunner.impl;
 
-import com.workday.techtest.Job;
-import com.workday.techtest.JobQueue;
-import com.workday.techtest.JobRunner;
+import com.mmattos.jobrunner.Job;
+import com.mmattos.jobrunner.JobQueue;
+import com.mmattos.jobrunner.JobRunner;
 
 import java.util.concurrent.*;
 import java.util.logging.Level;
