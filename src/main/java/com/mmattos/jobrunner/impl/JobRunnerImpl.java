@@ -39,7 +39,7 @@ public class JobRunnerImpl implements JobRunner {
                 JobStatus jobStatus = completionService.take().get();
                 JobStatusHandler.getInstance().update(jobStatus.getUniqueId(), jobStatus.getStatus());
             } catch (InterruptedException | ExecutionException e) {
-                logger.log(Level.WARNING, "Error while trying to retrieve job status.");
+                logger.warning("Error while trying to retrieve job status.");
             }
         }
     }
